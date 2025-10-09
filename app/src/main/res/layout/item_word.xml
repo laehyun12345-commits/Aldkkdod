@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- 단어 번호 -->
+        <TextView
+            android:id="@+id/wordNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@android:color/holo_blue_light"
+            android:textSize="14sp"
+            android:layout_alignParentStart="true"/>
+
+        <!-- 즐겨찾기 버튼 -->
+        <ImageButton
+            android:id="@+id/favoriteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_star_border"
+            android:contentDescription="즐겨찾기"/>
+
+        <!-- 단어 -->
+        <TextView
+            android:id="@+id/wordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="receive"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_below="@id/wordNumber"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"/>
+
+        <!-- 뜻 (중앙 정렬) -->
+        <TextView
+            android:id="@+id/meaningText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[동사] 받다, 받아들이다"
+            android:textSize="16sp"
+            android:layout_below="@id/wordText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:visibility="gone"/>
+
+        <!-- 발음 버튼 -->
+        <ImageButton
+            android:id="@+id/soundButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meaningText"
+            android:layout_alignParentStart="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_volume"
+            android:contentDescription="발음듣기"
+            android:layout_marginTop="12dp"/>
+
+        <!-- 펼치기/접기 버튼 -->
+        <ImageButton
+            android:id="@+id/expandButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/meaningText"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_down"
+            android:contentDescription="펼치기"/>
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>
